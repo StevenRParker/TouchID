@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		3E7232DE1DC39EF800253DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7232DD1DC39EF800253DF2 /* AppDelegate.swift */; };
-		3E7232E01DC39EF800253DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7232DF1DC39EF800253DF2 /* ViewController.swift */; };
+		3E7232E01DC39EF800253DF2 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7232DF1DC39EF800253DF2 /* AuthenticationVC.swift */; };
 		3E7232E31DC39EF800253DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7232E11DC39EF800253DF2 /* Main.storyboard */; };
 		3E7232E51DC39EF800253DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7232E41DC39EF800253DF2 /* Assets.xcassets */; };
 		3E7232E81DC39EF800253DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7232E61DC39EF800253DF2 /* LaunchScreen.storyboard */; };
+		3E7232F31DC3A55800253DF2 /* RoundedOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7232F21DC3A55800253DF2 /* RoundedOutlineView.swift */; };
+		3E7232F61DC3B1F900253DF2 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7232F51DC3B1F900253DF2 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E7232DA1DC39EF800253DF2 /* Touchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7232DD1DC39EF800253DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3E7232DF1DC39EF800253DF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E7232DF1DC39EF800253DF2 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		3E7232E21DC39EF800253DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E7232E41DC39EF800253DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E7232E71DC39EF800253DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E7232E91DC39EF800253DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E7232F21DC3A55800253DF2 /* RoundedOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedOutlineView.swift; sourceTree = "<group>"; };
+		3E7232F51DC3B1F900253DF2 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7232F61DC3B1F900253DF2 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				3E7232DC1DC39EF800253DF2 /* Touchy */,
 				3E7232DB1DC39EF800253DF2 /* Products */,
+				3E7232F41DC3B1F900253DF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +60,47 @@
 		3E7232DC1DC39EF800253DF2 /* Touchy */ = {
 			isa = PBXGroup;
 			children = (
+				3E7232F11DC39F3000253DF2 /* Model */,
+				3E7232F01DC39F2A00253DF2 /* View */,
+				3E7232EF1DC39F2300253DF2 /* Controller */,
 				3E7232DD1DC39EF800253DF2 /* AppDelegate.swift */,
-				3E7232DF1DC39EF800253DF2 /* ViewController.swift */,
 				3E7232E11DC39EF800253DF2 /* Main.storyboard */,
 				3E7232E41DC39EF800253DF2 /* Assets.xcassets */,
 				3E7232E61DC39EF800253DF2 /* LaunchScreen.storyboard */,
 				3E7232E91DC39EF800253DF2 /* Info.plist */,
 			);
 			path = Touchy;
+			sourceTree = "<group>";
+		};
+		3E7232EF1DC39F2300253DF2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E7232DF1DC39EF800253DF2 /* AuthenticationVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3E7232F01DC39F2A00253DF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E7232F21DC3A55800253DF2 /* RoundedOutlineView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3E7232F11DC39F3000253DF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3E7232F41DC3B1F900253DF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E7232F51DC3B1F900253DF2 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E7232E01DC39EF800253DF2 /* ViewController.swift in Sources */,
+				3E7232E01DC39EF800253DF2 /* AuthenticationVC.swift in Sources */,
+				3E7232F31DC3A55800253DF2 /* RoundedOutlineView.swift in Sources */,
 				3E7232DE1DC39EF800253DF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
